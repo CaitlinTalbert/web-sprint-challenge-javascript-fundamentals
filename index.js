@@ -227,6 +227,19 @@ class CuboidMakerTwo{
     this.height = properties.height; 
   }
 
+  volume(){
+    console.log('length * width * height'); 
+  }
+  surfaceArea(){
+    console.log('2 * (length * width + length * height + width * height)'); 
+  }
+}
+
+class cuboidTwo extends CuboidMaker {
+  constructor(cuboidTwoProperties) {
+    super(cuboidTwoProperties); 
+    this.volume = cuboidTwoProperties.volume; 
+  }
 }
 
 
