@@ -32,14 +32,19 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(number) {
+function summation(number){
+  //const counter = () => {
     let count = 0; 
-    return function update(){
-    return count++;  
+    return function() {
+      //count = count + 1; 
+      return ++count; 
     }
-}
-const number = (summation(4)); 
-console.log(summation()); 
+  }; 
+
+console.log(summation(4)); 
+  
+
+ 
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -241,7 +246,7 @@ class cuboidTwo extends CuboidMaker {
   }
 }
 
-const cuboidNumberTwo = new CuboidMaker({
+const newObj = new CuboidMaker({
   length: 4, 
   width: 5, 
   height: 5, 
@@ -251,12 +256,6 @@ const cuboidNumberTwo = new CuboidMaker({
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 //console.log(cuboidTwo.volume()); // 100
 //console.log(cuboidTwo.surfaceArea()); // 130
-
-
-
-
-
-  
 
 
   /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */

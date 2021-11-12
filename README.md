@@ -26,13 +26,24 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map returns a brand new array and does not change the original array, a return statement is needed here. .filter is used when you want to filter out data based on data that can equal true or false, the data that is true will be included in the array and the false data will not. .filter will return a new array and will also not change the original array. .reduce does not return a new array and will return a single value, can be used for anything but usually used for multiplication and addition. 
+
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function is a function that receives other function, while a callback function is a function that is passed into another function as an argument. 
 
 3. Explain what a closure is.
 
+A function can look outward for context, if a variable is not defined in a functions scope, the function will look outside the scope inheritance and search for a variable. So , closure is having access to the outside scope. 
+
 4. Describe the four principles of the 'this' keyword.
 
+There is window binding, implicit binding, explicit binding, and new binding. In window binding if the this keyword isn't given context it will return the window, which we do not ever want. Implicit binding applies to objects with methods, when the function is invoked, you look to the left of the dot and that is what the this keyword is referring to. In Explicit binding you tell a function what the this keyword should be using, including .call, .apply, or .bind. In new binding the new keyword is used when a function is invoked as a constructor function, the new keyword points to the new objects being created. 
+
 5. Why do we need super() in an extended class?
+
+super() does that .call or .create can do, it helps bind our classes together to attain object inheritance. Super() will tell a parent constructor to initialize the child's attributes/properties. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
