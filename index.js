@@ -139,8 +139,8 @@ const zooAnimals = [
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(a ,b){
-    return add (a + b); 
+function add(a, b){
+     return a + b;  
   }
 
 
