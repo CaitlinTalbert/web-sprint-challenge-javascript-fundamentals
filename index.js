@@ -167,16 +167,19 @@ function greeting(firstName, lastName){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(length, width, height){
-  this.CuboidMaker = length, width, height; 
-}
-
+function CuboidMaker(properties){
+  this.length = properties.length; 
+  this.width = properties. width; 
+  this.height = properties. height; 
+} 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-
+CuboidMaker.prototype.volume = function(){
+  return `length * width * height`; 
+}
 
 
 
@@ -185,8 +188,9 @@ function CuboidMaker(length, width, height){
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
 
-
-
+  CuboidMaker.prototype.surfaceArea = function(){
+    return `2 * (length * width + length * height + width * height`; 
+  }
 
 
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
