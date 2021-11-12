@@ -32,7 +32,6 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-//summation is adding using sum()
 function summation(number) {
     let count = 0; 
     return function update(){
@@ -168,8 +167,8 @@ function greeting(firstName, lastName){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(length, width, height){
+  this.CuboidMaker = length, width, height; 
 }
 
 
