@@ -1,6 +1,8 @@
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
-Study the code below and explain in your own words why nested function can access the variable internal. */
+Study the code below and explain in your own words why nested function can access the variable internally. */
+
+const { arrayExpression } = require("@babel/types");
 
 const external = "I'm outside the function";
 
@@ -17,7 +19,9 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+Because of closure, an inner function can reach out of its scope to grab a variable defined in an outer function. 
+Functions declared within that function can reach outward for context but never inward. 
+This will remain true no matter how deep the nest functions are.
 
 
 
