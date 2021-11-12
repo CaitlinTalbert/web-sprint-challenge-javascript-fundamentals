@@ -65,12 +65,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(){
+  function animalNames(array){
     const displayNames = []; 
     zooAnimals.forEach(function(item){
-      displayNames.push(item.animal_name.displayNames()); 
+    displayNames.push(item.animal_name); 
     }); 
+    return displayNames;
   }
+  console.log('request 1', animalNames(zooAnimals)); 
+
    
   
 
@@ -109,9 +112,14 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(array){
+    const totalPop = array.reduce(function(acc, item) {
+      return acc + item.population; 
+    },0); 
+      return totalPop;
   }
+
+  console.log('request 4', USApop(zooAnimals)); 
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -122,8 +130,8 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+    
   }
  
   
