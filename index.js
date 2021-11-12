@@ -71,7 +71,7 @@ const zooAnimals = [
       displayNames.push(item.animal_name.displayNames()); 
     }); 
   }
-  console.log(animalNames); 
+   
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -80,9 +80,13 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const lowerNames = zooAnimals.map(function(item){
+      return item.animal_name.toLowerCase(); 
+    })
+    return lowerNames; 
   }
+  console.log('request 2', lowerCaseNames(zooAnimals)); 
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
