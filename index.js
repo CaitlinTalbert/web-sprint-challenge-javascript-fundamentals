@@ -178,7 +178,7 @@ function CuboidMaker(properties){
   Formula for cuboid volume: length * width * height   */
 
 CuboidMaker.prototype.volume = function(){
-  return `length * width * height`; 
+  return this.length * this.width * this.height; 
 }
 
 
@@ -189,7 +189,7 @@ CuboidMaker.prototype.volume = function(){
   2 * (length * width + length * height + width * height)  */
 
   CuboidMaker.prototype.surfaceArea = function(){
-    return `(2 * (length * width + length * height + width * height))`; 
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height); 
   }
 
 
@@ -214,8 +214,8 @@ const cuboid = new CuboidMaker({
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+//console.log(cuboid.volume()); // 100
+//console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
@@ -228,24 +228,29 @@ class CuboidMakerTwo{
   }
 
   volume(){
-    console.log('length * width * height'); 
+    return this.length * this.width * this.height; 
   }
   surfaceArea(){
-    console.log('2 * (length * width + length * height + width * height)'); 
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height); 
   }
 }
 
 class cuboidTwo extends CuboidMaker {
   constructor(cuboidTwoProperties) {
     super(cuboidTwoProperties); 
-    this.volume = cuboidTwoProperties.volume; 
   }
 }
 
+const cuboidNumberTwo = new CuboidMaker({
+  length: 4, 
+  width: 5, 
+  height: 5, 
+});
+
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+//console.log(cuboidTwo.volume()); // 100
+//console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
