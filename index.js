@@ -19,9 +19,9 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-Because of closure, an inner function can reach out of its scope to grab a variable defined in an outer function. 
-Functions declared within that function can reach outward for context but never inward. 
-This will remain true no matter how deep the nest functions are.
+//Because of closure, an inner function can reach out of its scope to grab a variable defined in an outer function. 
+//Functions declared within that function can reach outward for context but never inward. 
+//This will remain true no matter how deep the nest functions are.
 
 
 
@@ -32,10 +32,15 @@ This will remain true no matter how deep the nest functions are.
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
-  }
+//summation is adding using sum()
+function summation(number) {
+    let count = 0; 
+    return function update(){
+    return count++;  
+    }
+}
+const number = (summation(4)); 
+console.log(summation()); 
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -60,9 +65,13 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(){
+    const displayNames = []; 
+    zooAnimals.forEach(function(item){
+      displayNames.push(item.animal_name.displayNames()); 
+    }); 
   }
+  console.log(animalNames); 
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -81,9 +90,13 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    const lowPops = zooAnimals.filter(function(item){
+      return item.population < 5; 
+    })
+    return lowPops; 
   }
+  console.log(lowPopulationAnimals(zooAnimals)); 
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
