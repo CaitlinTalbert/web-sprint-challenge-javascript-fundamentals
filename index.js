@@ -143,11 +143,10 @@ function add(a, b){
      return a + b;  
   }
 
-
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(a, b){
+   return a * b; 
   }
 
 
