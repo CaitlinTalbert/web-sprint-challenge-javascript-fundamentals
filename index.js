@@ -68,12 +68,13 @@ const zooAnimals = [
   function animalNames(array){
     const displayNames = []; 
     zooAnimals.forEach(function(item){
-    displayNames.push(item.animal_name); 
+    displayNames.push(`${item.animal_name}, ${item.scientific_name}`); 
     }); 
     return displayNames;
   }
   console.log('request 1', animalNames(zooAnimals)); 
 
+   
    
   
 
@@ -131,15 +132,15 @@ const zooAnimals = [
   */
 
   function consume(a, b, cb){
-    
+    return cb(a, b); 
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(a ,b){
+    return add (a + b); 
   }
 
 
